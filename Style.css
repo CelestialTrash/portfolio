@@ -41,9 +41,48 @@ body {
 
 }
 
+
 .navbar a {
     font-weight: 500;
+    position: relative;
+    text-decoration: none;
+    transition: 300ms;
 }
+
+.navbar a:hover {
+background-color: rgba(217, 251, 251, 0.067);
+
+}
+
+
+.follower {
+    position: absolute;
+    width: 30px; /* Circle diameter */
+    height: 30px; /* Circle diameter */
+    border: 2px solid white; /* Circle border */
+    border-radius: 50%;
+    pointer-events: none; /* Make sure the circle doesn't block pointer events */
+    transform: translate(-50%, -50%); /* Center the circle on the pointer */
+    transition: transform 0.05s; /* Smooth the movement */}
+
+
+/*BRACKET HOOVER SECTION*/
+
+.navbar a:hover::before{
+    content: "[ ";
+    position: absolute;
+    left: -20px;
+}
+
+
+.navbar a:hover::after {
+    opacity: 1;
+    content: "] ";
+    position: absolute;
+    right: -20px;
+}
+
+
 
 /*SECTION -----------------> */
 
